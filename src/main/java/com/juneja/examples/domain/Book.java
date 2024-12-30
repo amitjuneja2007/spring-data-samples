@@ -4,14 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @NoArgsConstructor
-@Data
-//@AllArgsConstructor
+@Getter
+@Setter
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +24,7 @@ public class Book {
 		this.isbn = isbn;
 	}
 
-	public Book(Long Id, String title, String isbn) {
+	public Book(Long id, String title, String isbn) {
 		this.id = id;
 		this.title = title;
 		this.isbn = isbn;
